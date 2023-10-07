@@ -16,7 +16,7 @@ const Chat = () => {
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const ENDPOINT = "https://realtime-chat-application-6i43.vercel.app/"; // Replace with your actual server URL
+  const ENDPOINT = "https://realtime-chat-application-livid.vercel.app/"; // Replace with your actual server URL
 
   const location = useLocation(); // Use useLocation hook to get the location object
 
