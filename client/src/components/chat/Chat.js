@@ -16,7 +16,7 @@ const Chat = () => {
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const ENDPOINT = "localhost:5000"; // Replace with your actual server URL
+  const ENDPOINT = "https://realtimechatapplicationproject.000webhostapp.com/"; // Replace with your actual server URL
 
   const location = useLocation(); // Use useLocation hook to get the location object
 
