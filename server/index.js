@@ -11,6 +11,9 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
+const HOSTNAME = process.env.HOSTNAME || '127.0.0.1'; // Default to '127.0.0.1' if HOSTNAME is not defined
+const PORT = process.env.PORT || 5000;
+
 app.use(cors());
 app.use(router);
 
@@ -48,4 +51,4 @@ io.on('connect', (socket) => {
   })
 });
 
-server.listen(process.env.PORT || 5000, () => console.log(`Server has started.`));
+server.listen(PORT, HOSTNAME, () => console.log(`Server is running at http://${HOSTNAME}:${PORT}`));
